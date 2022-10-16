@@ -37,6 +37,6 @@ public class SectorEntity {
     @JoinColumn(name = "parent_sector_id")
     private SectorEntity parentSector;
 
-    @OneToMany(mappedBy = "parentSector")
+    @OneToMany(mappedBy = "parentSector", fetch = FetchType.LAZY)
     private List<SectorEntity> subSectors;
 }
