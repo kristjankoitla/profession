@@ -1,15 +1,22 @@
 package com.helmes.sectors.sector;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
 public class SectorService {
 
     private final SectorDao dao;
+
+    public SectorEntity getById(UUID id) {
+        return dao.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sector does not exist"));
+    }
 
     public List<SectorEntity> getAllSectorsHierarchically() {
         return dao.findByParentSectorNull();

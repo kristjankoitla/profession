@@ -11,7 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import java.util.Set;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -35,5 +35,5 @@ public class WorkerEntity {
             name = "sector_worker",
             joinColumns = @JoinColumn(name = "worker_id"),
             inverseJoinColumns = @JoinColumn(name = "sector_id"))
-    Set<SectorEntity> sectors;
+    List<SectorEntity> sectors;
 }
