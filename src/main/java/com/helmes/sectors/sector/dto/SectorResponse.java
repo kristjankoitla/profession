@@ -1,4 +1,4 @@
-package com.helmes.sectors.worker;
+package com.helmes.sectors.sector.dto;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,8 +8,8 @@ import java.util.UUID;
 
 @Getter
 @Setter
-public class WorkerRequest {
+public class SectorResponse {
+    private UUID id;
     private String name;
-    private boolean agreeToTerms;
-    List<UUID> sector_ids;
+    private List<SectorResponse> subSectors;
 }

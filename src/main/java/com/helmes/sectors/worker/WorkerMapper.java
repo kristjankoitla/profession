@@ -1,8 +1,10 @@
 package com.helmes.sectors.worker;
 
-import com.helmes.sectors.sector.SectorEntity;
+import com.helmes.sectors.sector.entity.SectorEntity;
 import com.helmes.sectors.sector.SectorService;
-import lombok.RequiredArgsConstructor;
+import com.helmes.sectors.worker.dto.WorkerRequest;
+import com.helmes.sectors.worker.dto.WorkerResponse;
+import com.helmes.sectors.worker.entity.WorkerEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.springframework.beans.factory.annotation.Autowired;

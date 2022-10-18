@@ -1,5 +1,6 @@
 package com.helmes.sectors.worker;
 
+import com.helmes.sectors.worker.entity.WorkerEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -7,7 +8,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class WorkerService {
 
-    private final WorkerDao dao;
+    private final WorkerRepository dao;
 
     public WorkerEntity saveWorker(WorkerEntity worker) {
         return dao.save(worker);

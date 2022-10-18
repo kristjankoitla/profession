@@ -1,5 +1,7 @@
 package com.helmes.sectors.sector;
 
+import com.helmes.sectors.sector.dto.SectorResponse;
+import com.helmes.sectors.sector.entity.SectorEntity;
 import org.mapstruct.Mapper;
 
 import java.util.List;

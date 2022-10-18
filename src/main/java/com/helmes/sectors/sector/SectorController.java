@@ -1,5 +1,6 @@
 package com.helmes.sectors.sector;
 
+import com.helmes.sectors.sector.dto.SectorResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

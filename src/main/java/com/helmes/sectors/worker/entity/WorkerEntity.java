@@ -1,6 +1,6 @@
-package com.helmes.sectors.worker;
+package com.helmes.sectors.worker.entity;
 
-import com.helmes.sectors.sector.SectorEntity;
+import com.helmes.sectors.sector.entity.SectorEntity;
 import lombok.Getter;
 import lombok.Setter;
 

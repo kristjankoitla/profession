@@ -1,4 +1,4 @@
-package com.helmes.sectors.worker;
+package com.helmes.sectors.worker.dto;
 
 import lombok.Getter;
 import lombok.Setter;
