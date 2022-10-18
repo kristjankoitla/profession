@@ -13,13 +13,13 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class SectorService {
 
-    private final SectorRepository dao;
+    private final SectorRepository repository;
 
     public SectorEntity getById(UUID id) {
-        return dao.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sector does not exist"));
+        return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sector does not exist"));
     }
 
     public List<SectorEntity> getAllSectorsHierarchically() {
-        return dao.findByParentSectorNull();
+        return repository.findByParentSectorNull();
     }
 }

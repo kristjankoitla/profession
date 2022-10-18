@@ -108,15 +108,16 @@ That's it. You should be able to close all the connections now.
 
 ### Setup
 
-1. After opening the poject in IntelliJ, go to `View > Tool Windows > Gradle > Refresh` to install all Gradle dependencies.
+1. After opening the project in IntelliJ, go to `View > Tool Windows > Gradle > Reload` to install all Gradle dependencies.
 2. Make sure that the database is set up.
 3. Configure environment variables from the `Edit Configurations` menu (more down below)
 4. Run the application from `SectorsApplication` class.
 
+I would not recommend doing this from the command line, as it makes everything more complicated.
+
 ### Environment variables
 
 After having the database set up, add the following environment variables to the Spring application:
-
-1. `DB_LOCATION` (eg `localhost:5432/helmes`)
-2. `DB_USERNAME` (eg `helmes`)
-3. `DB_PASSWORD` (eg `helmes`)
+* `DB_LOCATION` (eg `localhost:5432/helmes`)
+* `DB_USERNAME` (eg `helmes`)
+* `DB_PASSWORD` (eg `helmes`)

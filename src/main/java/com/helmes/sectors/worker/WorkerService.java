@@ -8,9 +8,9 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class WorkerService {
 
-    private final WorkerRepository dao;
+    private final WorkerRepository repository;
 
     public WorkerEntity saveWorker(WorkerEntity worker) {
-        return dao.save(worker);
+        return repository.save(worker);
     }
 }
