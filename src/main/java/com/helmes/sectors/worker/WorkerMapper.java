@@ -17,13 +17,13 @@ public abstract class WorkerMapper {
     @Autowired
     protected SectorService sectorService;
 
-    @Mapping(target = "sectors", source = "request.sector_ids")
+    @Mapping(target = "sectors", source = "request.sectorIds")
     abstract WorkerEntity entityFrom(WorkerRequest request);
 
-    @Mapping(target = "sectors", source = "request.sector_ids")
+    @Mapping(target = "sectors", source = "request.sectorIds")
     abstract WorkerEntity entityFrom(UUID id, WorkerRequest request);
 
-    @Mapping(target = "sector_ids", source = "entity.sectors")
+    @Mapping(target = "sectorIds", source = "entity.sectors")
     abstract WorkerResponse responseFrom(WorkerEntity entity);
 
     UUID idFromSectorEntity(SectorEntity sectorEntity) {

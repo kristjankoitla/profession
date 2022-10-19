@@ -12,5 +12,5 @@ public class WorkerResponse {
     private UUID id;
     private String name;
     private boolean agreeToTerms;
-    List<UUID> sector_ids;
+    List<UUID> sectorIds;
 }

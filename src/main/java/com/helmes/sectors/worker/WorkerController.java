@@ -4,6 +4,7 @@ import com.helmes.sectors.worker.dto.WorkerRequest;
 import com.helmes.sectors.worker.dto.WorkerResponse;
 import com.helmes.sectors.worker.entity.WorkerEntity;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -34,5 +35,10 @@ public class WorkerController {
         WorkerEntity requestEntity = mapper.entityFrom(id, request);
         WorkerEntity responseEntity = service.saveWorker(requestEntity);
         return mapper.responseFrom(responseEntity);
+    }
+
+    @GetMapping("{id}")
+    public WorkerResponse getWorker(@PathVariable UUID id) {
+        return mapper.responseFrom(service.getById(id));
     }
 }

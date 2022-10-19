@@ -16,5 +16,5 @@ public class WorkerRequest {
 
     @NotNull
     private boolean agreeToTerms;
-    List<UUID> sector_ids;
+    List<UUID> sectorIds;
 }
